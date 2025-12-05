@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formulaire d'adhésion - GIE GREEN AGROTECH (GAT)</title>
+<style>
+  :root{
+    --green:#1f8a3d;
+    --dark:#203040;
+    /*--muted:#6b7280;*/
+    /*--paper:#fbfbfb;*/
+    --accent:#e6f4ea;
+    --maxwidth:900px;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  body{background:#f2f4f7;margin:0;padding:24px;display:flex;justify-content:center;}
+  .container{width:100%;max-width:var(--maxwidth);background:var(--paper);box-shadow:0 6px 20px rgba(20,30,50,0.08);border-radius:8px;overflow:hidden;}
+  header{background:linear-gradient(90deg,var(--green),#2fb45b);color:#fff;padding:20px 28px;display:flex;align-items:center;gap:16px;}
+  header img{width:64px;height:64px;border-radius:8px;background:#fff;padding:6px;}
+  header .htext{line-height:1;}
+  header h1{margin:0;font-size:18px;letter-spacing:0.3px;}
+  header p{margin:2px 0 0;font-size:13px;opacity:0.95}
+  main{padding:22px 28px;}
+  h2{color:var(--dark);margin:12px 0;}
+  .muted{color:var(--muted);font-size:13px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  label{font-weight:600;font-size:13px;color:var(--dark);display:block;margin-bottom:6px;}
+  input[type="text"], input[type="email"], input[type="tel"], textarea, select {width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;font-size:14px;box-sizing:border-box;}
+  textarea{min-height:90px;resize:vertical;}
+  .section{border-left:4px solid var(--accent);padding:12px;background:#fff;border-radius:6px;margin-bottom:14px;}
+  .inline{display:flex;gap:12px;}
+  .small{font-size:13px;color:var(--muted)}
+  .btn{display:inline-block;padding:10px 14px;border-radius:6px;background:var(--green);color:#fff;text-decoration:none;border:none;cursor:pointer;font-weight:700}
+  .btn.secondary{background:#efefef;color:var(--dark)}
+  .center{text-align:center}
+  .two-col{display:grid;grid-template-columns:1fr 260px;gap:16px;align-items:start}
+  .admin-box{background:#f8faf8;border:1px dashed #cfe8d4;padding:12px;border-radius:6px;font-size:14px}
+  footer{padding:14px 28px;background:#fff;border-top:1px solid #eef2f7;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+  .footer-left{font-weight:600;color:var(--dark)}
+  .foot-right{font-size:12px;color:var(--muted)}
+  .cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .signature{border-top:1px solid #ccd6df;padding-top:8px;margin-top:10px;text-align:center;font-size:13px}
+  .badge{display:inline-block;background:#fff;padding:6px 10px;border-radius:18px;border:1px solid #e6eef0;font-weight:700;color:var(--dark);font-size:13px}
+  .note{font-size:13px;color:#444;margin-top:6px}
+  .required{color:#b91c1c;margin-left:6px}
+  /* print */
+  @media print{
+    body{background:#fff;padding:0}
+    .container{box-shadow:none;border-radius:0}
+    header{color:#000;background:none}
+    .btn, .no-print{display:none}
+  }
+</style>
+</head>
+<body>
+  <div class="container" id="page">
+    <header>
+  <img src="logo.png" alt="Logo GREEN AgroTech SA" 
+       style="width:120px;height:120px;border-radius:8px;padding:6px;background:#fff;">
+  
+  <div class="htext">
+    <h1 style="margin:0;font-size:20px;font-weight:700;">FORMULAIRE D'ADHESION OFFICIEL AU GIE GREEN AGROTECH</h1>
+    
+    <p style="margin:6px 0 0;color:rgb(250, 251, 252);">
+       Réf : GAT/ADH/FORM/2025
+    </p>
+
+    <p style="margin:2px 0;color:#fafafa;">
+      Siège : Rue Philibert, Libreville
+    </p>
+
+    <p style="margin:2px 0;color:#eeeff1;">
+      Email : contact.greenagrotech@gmail.com
+    </p>
+
+    <p style="margin:6px 0 0;font-style:italic;color:#eef0f3;">
+      « Au service d’une agriculture moderne et responsable »
+    </p>
+  </div>
+</header>
+
+<hr style="border:0;border-top:1px solid #e5e7eb;margin:14px 0;">
+
+    <main>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+  <form id="gatForm" action="https://script.google.com/macros/s/AKfycbzBNMvQBzu3W8BrS0ptKan5halsAp_iLkZNFBq9nVMPayk6EGp3zBP2vWFRxN-uZhoEAw/exec" method="POST" target="hidden_iframe">
+
+      <!-- Preambule -->
+      <section class="section">
+         <h2>PRÉAMBULE</h2>
+        <p class="muted">Le présent formulaire d'adhésion est établi en conformité avec les Statuts du GIE GREEN AGROTECH (GAT), le Règlement Intérieur en vigueur et l'Acte Uniforme OHADA relatif au Groupement d'Intérêt Économique. Il fixe les conditions d'admission, les obligations des membres et les règles financières applicables.</p>
+      </section>
+
+      <!-- Identification -->
+      <section>
+         <h2>I. IDENTIFICATION DU CANDIDAT</h2>
+        <div class="grid">
+          <div>
+            <label for="nom">Nom et prénoms <span class="required">*</span></label>
+            <input id="nom" name="nom" type="text" placeholder="Nom et prénoms complets" required autocomplete="nom">
+            <input type="hidden" name="memberNum" id="memberNum">
+            <input type="hidden" name="receiptNum" id="receiptNum">
+
+          </div>
+          <div>
+            <label for="naissance">Date et lieu de naissance <span class="required">*</span></label>
+            <input id="naissance" name="naissance" type="text" placeholder="JJ/MM/AAAA — Lieu" autocomplete="naissance">
+          </div>
+          <div>
+            <label for="nationalite">Nationalité <span class="required">*</span></label>
+            <input id="nationalite" name="nationalite" type="text" placeholder="Ex : Gabonaise" autocomplete="nationalite">
+          </div>
+          <div>
+            <label for="profession">Profession / Activité principale <span class="required">*</span></label>
+            <input id="profession" name="profession" type="text" autocomplete="profession">
+          </div>
+          <div style="grid-column:1/3">
+            <label for="adresse">Adresse complète (domicile) <span class="required">*</span></label>
+            <input id="adresse" name="adresse" type="text" autocomplete="adresse">
+          </div>
+          <div>
+            <label for="telephone">Téléphone <span class="required">*</span></label>
+            <input id="telephone" name="telephone" type="tel" placeholder="+241 ..." autocomplete="tel">
+          </div>
+          <div>
+            <label for="email">Email <span class="required">*</span></label>
+            <input id="email" name="email" type="email" placeholder="contact@exemple.com" autocomplete="email">
+          </div>
+          <div>
+            <label for="piece">Pièce d'identité (type & n°) <span class="required">*</span></label>
+            <input id="piece" name="piece" type="text" placeholder="CNI / Passeport - N°" autocomplete="piece">
+          </div>
+          <div>
+            <label for="pieceInfo">Date de délivrance / Lieu <span class="required">*</span></label>
+            <input id="pieceInfo" name="pieceInfo" type="text" placeholder="JJ/MM/AAAA — Lieu" autocomplete="pieceInfo">
+          </div>
+        </div>
+      </section>
+
+      <!-- Engagements -->
+      <section class="section">
+        <h2>II. ENGAGEMENTS DE L'ADHÉRENT</h2>
+        <p class="muted">Je soussigné(e), déclare adhérer volontairement au Groupement d'Intérêt Économique <strong>GIE GREEN AGROTECH (GAT)</strong>. Je m'engage à respecter les Statuts et le Règlement Intérieur, à contribuer aux cotisations statutaires et extraordinaires, à participer activement aux objectifs du GIE et à accepter les sanctions prévues en cas de manquement.</p>
+      </section>
+
+      <!-- Conditions financières -->
+      <section>
+        <h2>III. CONDITIONS FINANCIÈRES</h2>
+        <div class="two-col">
+          <div>
+            <p class="muted">Tout membre sollicitant son admission est tenu de verser un apport d'enregistrement non remboursable déterminé par la catégorie choisie :</p>
+            <ul>
+              <li><strong>Catégorie C :</strong> 100 FCFA</li>
+              <li><strong>Catégorie B :</strong> 5 000 FCFA</li>
+              <li><strong>Catégorie A :</strong> 10 000 FCFA</li>
+            </ul>
+
+            <p class="muted">En complément, le membre s'acquitte d'un droit d'entrée et des cotisations périodiques selon la catégorie.</p>
+
+            <div style="margin-top:10px">
+              <label for="droitEntree">Montant du droit d'entrée (à renseigner) <span class="required">*</span></label>
+              <input id="droitEntree" name="droitEntree" type="text" placeholder="ex : 10000">
+            </div>
+
+            <div style="margin-top:10px">
+              <p>Cotisations périodiques par catégorie</p>
+              <div class="grid">
+                <div><label for="cotC">Catégorie C</label><input id="cotC" name="cotC" type="text" placeholder="ex : 1 000 FCFA"></div>
+                <div><label for="cotB">Catégorie B</label><input id="cotB" name="cotB" type="text" placeholder="ex : 25 000 FCFA"></div>
+                <div><label for="cotA">Catégorie A</label><input id="cotA" name="cotA" type="text" placeholder="ex : 50 000 FCFA"></div>
+              </div>
+            </div>
+
+            <div style="margin-top:12px">
+              <label for="autresOblig">Autres obligations financières éventuelles <span class="required">*</span></label>
+              <textarea id="autresOblig"></textarea>
+            </div>
+
+            <p class="small">Le paiement des droits d'entrée donne lieu à un reçu numéroté et à l'inscription au registre des cotisations — cf. Annexes IV, V et VI.</p>
+          </div>
+
+          <!-- Categories & classification -->
+          <div>
+            <div class="admin-box">
+              <h3 style="margin:0 0 8px 0">Classement & Catégorie (à cocher)</h3>
+              <label><input id="catA" name="categorie" type="radio" value="A"> <strong>Catégorie A</strong> — Membre Investisseur</label><br>
+              <label><input id="catB" name="categorie" type="radio" value="B"> <strong>Catégorie B</strong> — Membre Partenaire Actif</label><br>
+              <label><input id="catC" name="categorie" type="radio" value="C"> <strong>Catégorie C</strong> — Membre Adhérent / Soutien</label>
+
+              <div style="margin-top:8px">
+                <label for="motifClassement">Motif du classement (décision) <span class="required">*</span></label>
+                <textarea id="motifClassement" placeholder="Ex : investissement, engagement terrain, expertise"></textarea>
+              </div>
+
+              <div style="margin-top:8px">
+                <label for="periodicite">Périodicité choisie</label>
+                <select id="periodicite">
+                  <option value="mensuelle">Mensuelle</option>
+                  <option value="trimestrielle">Trimestrielle</option>
+                  <option value="annuelle">Annuelle</option>
+                </select>
+              </div>
+
+              <div style="margin-top:10px">
+                <button type="submit" class="btn" id="generate">Générer reçu & Enregistrer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Données personnelles -->
+      <section class="section">
+        <h2>IV. PROTECTION DES DONNÉES PERSONNELLES</h2>
+        <p class="muted">Les informations recueillies dans ce formulaire sont utilisées exclusivement pour la gestion administrative du GIE GREEN AGROTECH (GAT). Elles ne seront ni cédées ni communiquées à des tiers sans votre consentement, sauf obligations légales. Conformément aux lois applicables, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour l'exercer, contactez : <strong>contact.greenagrotech@gmail.com</strong>.</p>
+      </section>
+
+      <!-- Clause responsabilité -->
+      <section>
+        <h2>V. CLAUSE DE RESPONSABILITÉ</h2>
+        <p class="muted">Conformément à l'Acte Uniforme OHADA relatif au GIE, les membres sont tenus indéfiniment et solidairement responsables des dettes sociales du groupement. Le retrait ou l'exclusion n'exonère pas des obligations survenues durant la période d'adhésion.</p>
+      </section>
+
+      <!-- Pieces à joindre -->
+      <section>
+        <h2>VI. PIÈCES À JOINDRE</h2>
+        <ul class="small">
+          <li>Copie d'une pièce d'identité en cours de validité</li>
+          <li>Deux photos d'identité récentes</li>
+          <li>Reçu de paiement du droit d'entrée</li>
+          <li>Tout document exigé par les Statuts (ex. extrait RCCM, attestation fiscale)</li>
+        </ul>
+      </section>
+
+      <!-- Cadre réservé à l'administration -->
+      <section class="section">
+        <h2>VII. CADRE RÉSERVÉ AU GIE (NE PAS REMPLIR PAR LE CANDIDAT)</h2>
+        <div class="admin-box">
+          <p><strong>Numéro d'adhérent :</strong> <span id="numeroAdherent">—</span></p>
+          <p><strong>Numéro de reçu :</strong> <span id="numeroRecu">—</span></p>
+          <p><strong>Date d'enregistrement :</strong> <span id="dateEnreg">—</span></p>
+          <p><strong>Référence comptable / reçu :</strong> <span id="refCompta">—</span></p>
+          <p><strong>Agent en charge :</strong> <span id="agentCharge">—</span></p>
+          <p><strong>Observations internes :</strong></p>
+          <textarea id="observations" placeholder="Observations du Comité..." style="width:100%;"></textarea>
+        </div>
+      </section>
+
+      <!-- Signatures -->
+      <section class="two-col">
+        <div>
+          <h2>VIII. SIGNATURES</h2>
+          <p class="muted">Je déclare que les informations ci-dessus sont exactes. Je joins la mention manuscrite : <strong>« lu et approuvé »</strong> avant ma signature.</p>
+          <div style="margin-top:12px">
+            <label for="lieuDate">Lieu & Date <span class="required">*</span></label>
+            <input id="lieuDate" name="lieuDate" type="text" placeholder="Ville, JJ/MM/AAAA" autocomplete="lieuDate">
+          </div>
+          <div style="margin-top:12px">
+            <label for="signatureCandidat">Signature du candidat (précédée de la mention manuscrite "lu et approuvé") <span class="required">*</span></label>
+            <input id="signatureCandidat" name="signatureCandidat" type="text" placeholder="Nom et signature" autocomplete="signatureCandidat">
+          </div>
+          <div style="margin-top:12px">
+            <label for="visaComite">Cachet & Visa du Comité de Gestion / Président <span class="required">*</span></label>
+            <input id="visaComite" name="visaComite" type="text" placeholder="Nom & signature du Président" autocomplete="visaComite">
+          </div>
+        </div>
+
+        <div>
+          <h2>PIÈCE RÉCAPITULATIVE</h2>
+          <div style="background:#fff;padding:12px;border-radius:6px;border:1px solid #eef2f7">
+            <p><strong>Nom :</strong> <span id="recapNom">—</span></p>
+            <p><strong>Email :</strong> <span id="recapEmail">—</span></p>
+            <p><strong>Téléphone :</strong> <span id="recapTel">—</span></p>
+            <p><strong>Catégorie :</strong> <span id="recapCat">—</span></p>
+            <p><strong>Droit d'entrée payé :</strong> <span id="recapDroit">—</span></p>
+            <p class="small">Cliquez sur <strong>Générer reçu & Enregistrer</strong> pour attribuer automatiquement un numéro d'adhérent et un numéro de reçu.</p>
+          </div>
+        </div>
+      </section>
+
+      <div style="margin-top:16px" class="center no-print">
+        <button class="btn" id="printBtn" onclick="window.print()">Imprimer / Enregistrer en PDF</button>
+        <button class="btn secondary" id="resetBtn" style="margin-left:8px">Réinitialiser</button>
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="footer-left">GIE GREEN AGROTECH (GAT)</div>
+      <div class="foot-right">Formulaire d'adhésion — Réf : GAT/ADH/FORM/2025 — Page <span id="pageNum">1</span>/1</div>
+    </footer>
+  </div>
+
+<script>
+  // Simple utilities for IDs and receipts
+  function pad(num, size){ return num.toString().padStart(size,'0'); }
+  function todayYYYY(){ const d=new Date(); return d.getFullYear(); }
+  function randomInt(max){ return Math.floor(Math.random()*max); }
+
+  document.getElementById('generate').addEventListener('click', function(){
+    // basic validation minimal
+    const nom = document.getElementById('nom').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const tel = document.getElementById('telephone').value.trim();
+    const catA = document.getElementById('catA').checked;
+    const catB = document.getElementById('catB').checked;
+    const catC = document.getElementById('catC').checked;
+    const droit = document.getElementById('droitEntree').value.trim();
+
+    if(!nom){ alert('Veuillez renseigner le nom et prénoms du candidat.'); return; }
+    if(! (catA || catB || catC) ){ if(!confirm('Aucune catégorie sélectionnée. Continuer sans catégorie ?')) return; }
+
+    // assign category
+    let cat='—';
+    if(catA) cat='A'; else if(catB) cat='B'; else if(catC) cat='C';
+
+    // generate member number GAT-YYYY-XXXX
+    const year = todayYYYY();
+    const serial = pad(Math.floor(Math.random()*9999)+1,4);
+    const memberNum = `GAT-${year}-${serial}`;
+    const receiptNum = `R-${year}-${pad(Math.floor(Math.random()*99999)+1,5)}`;
+
+    // populate admin fields
+    document.getElementById('numeroAdherent').textContent = memberNum;
+    document.getElementById('numeroRecu').textContent = receiptNum;
+    document.getElementById('dateEnreg').textContent = new Date().toLocaleDateString();
+    document.getElementById('refCompta').textContent = `COMPT-${year}-${pad(randomInt(9999),4)}`;
+    document.getElementById('agentCharge').textContent = 'Agent GIE (à compléter)';
+    // recap
+    document.getElementById('recapNom').textContent = nom;
+    document.getElementById('recapEmail').textContent = email || '—';
+    document.getElementById('recapTel').textContent = tel || '—';
+    document.getElementById('recapCat').textContent = cat;
+    document.getElementById('recapDroit').textContent = droit || '—';
+// Préparer les données
+ const formData = {
+        nom: nom,
+        naissance: document.getElementById('naissance').value.trim(),
+        nationalite: document.getElementById('nationalite').value.trim(),
+        profession: document.getElementById('profession').value.trim(),
+        adresse: document.getElementById('adresse').value.trim(),
+        telephone: tel,
+        email: email,
+        piece: document.getElementById('piece').value.trim(),
+        pieceInfo: document.getElementById('pieceInfo').value.trim(),
+        categorie: cat,
+        droitEntree: droit,
+        cotA: document.getElementById('cotA').value.trim(),
+        cotB: document.getElementById('cotB').value.trim(),
+        cotC: document.getElementById('cotC').value.trim(),
+        autresOblig: document.getElementById('autresOblig').value.trim(),
+        lieuDate: document.getElementById('lieuDate').value.trim(),
+        signatureCandidat: document.getElementById('signatureCandidat').value.trim(),
+        visaComite: document.getElementById('visaComite').value.trim()
+    };
+
+    const url = "https://script.google.com/macros/s/AKfycbzBNMvQBzu3W8BrS0ptKan5halsAp_iLkZNFBq9nVMPayk6EGp3zBP2vWFRxN-uZhoEAw/exec";
+
+    // assign hidden inputs
+document.getElementById('memberNum').value = memberNum;
+document.getElementById('receiptNum').value = receiptNum;
+
+// envoyer les données
+fetch(url, {
+  method: "POST",
+  mode: "no-cors" , 
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(formData)
+})
+.then(response => response.json())
+.then(data => console.log("Données envoyées:", data))
+.catch(error => console.error("Erreur lors de l'envoi:", error));
+
+    alert('Numéro d\'adhérent et reçu générés. Pensez à signer et à tamponner le document puis à l\'archiver physiquement.');
+  });
+
+
+  // reset
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(!confirm('Réinitialiser le formulaire ?')) return;
+    document.querySelectorAll('input[type=text], input[type=tel], input[type=email], textarea').forEach(i=>i.value='');
+    document.querySelectorAll('input[type=radio]').forEach(i=>i.checked=false);
+    document.getElementById('numeroAdherent').textContent='—';
+    document.getElementById('numeroRecu').textContent='—';
+    document.getElementById('dateEnreg').textContent='—';
+    document.getElementById('refCompta').textContent='—';
+    document.getElementById('agentCharge').textContent='—';
+    document.getElementById('recapNom').textContent='—';
+    document.getElementById('recapEmail').textContent='—';
+    document.getElementById('recapTel').textContent='—';
+    document.getElementById('recapCat').textContent='—';
+    document.getElementById('recapDroit').textContent='—';
+  });
+
+  // small: set page num for footer if multi page print (basic)
+  window.onload = function(){ try{ const pageNum = document.getElementById('pageNum'); if(pageNum) pageNum.textContent='1'; }catch(e){} }
+  
+  // Imprimer / PDF et recharger le formulaire après impression avec alerte
+document.getElementById('printBtn').addEventListener('click', function() {
+    window.print(); // Ouvre la boîte d'impression
+});
+
+window.onafterprint = function() {
+    alert("Merci pour votre adhésion ! Votre formulaire a été enregistré avec succès.");
+    window.location.href = "index.html"; // Recharge le formulaire
+};
+  // --- SUBMIT via iframe pour gérer alert / recap ---
+    form.submit();
+
+
+// --- ALERT + RECHARGEMENT après soumission via iframe ---
+document.querySelector('iframe[name="hidden_iframe"]').addEventListener('load', function() {
+    alert("Merci ! Votre formulaire a été enregistré avec succès.");
+    window.location.reload(); // Recharge le formulaire
+});
+
+</script>
+</body>
+</html>
